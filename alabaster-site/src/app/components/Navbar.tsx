@@ -21,11 +21,11 @@ export default function Navbar() {
     <>
       {/* Web menu */}
       <nav
-        className=" hidden md:block bg-black backdrop-blur-lg top-0 sticky relative flex w-full flex-wrap items-center justify-between md:py-2">
+        className="hidden md:block backdrop-blur-[6px] backdrop-brightness-60 top-0 z-50 sticky relative flex w-full flex-wrap items-center justify-between md:py-2">
         <div className="flex w-full flex-wrap items-center justify-between px-3">
           <Image
-            className="block h-24 w-auto"
-            src="/logo.svg"
+            className="block h-22 w-auto"
+            src="/images/logo.svg"
             height="800"
             width="800"
             alt="logo"
@@ -39,10 +39,10 @@ export default function Navbar() {
       </nav>
      
       {/* mobile menu */}
-      <div className=' md:hidden top-0 z-50 backdrop-blur-md sticky flex flex-row justify-between px-2'>
+      <div className=' md:hidden top-0 z-50 backdrop-blur-[6px] backdrop-brightness-60 sticky flex flex-row justify-between px-2'>
         <Image
-          className="block h-20 w-auto"
-          src="/logo.svg"
+          className="block h-16 w-auto"
+          src="/images/logo.svg"
           height="800"
           width="800"
           alt="logo"
@@ -50,7 +50,7 @@ export default function Navbar() {
         <Popover>
           {({ open }) => (
             <>
-              <PopoverButton className="inline-flex items-center justify-center p-3 pt-6 text-white">
+              <PopoverButton className="inline-flex items-center justify-center p-3 pt-4 text-white">
                 <span className="sr-only">Open main menu</span>
                 {open ? (
                   <XMarkIcon className="block h-10 w-10 text-red-700" aria-hidden="true" />
@@ -61,7 +61,7 @@ export default function Navbar() {
               <PopoverPanel
                 transition
                 anchor="bottom"
-                className=" w-full h-lvh bg-stone-900/60 backdrop-blur-lg text-sm/6 transition duration-200 ease-in-out [--anchor-gap:--spacing(5)] data-closed:-translate-y-1 data-closed:opacity-0"
+                className=" w-dvw h-dvh bg-stone-900/60 backdrop-blur-lg text-sm/6 transition duration-150 ease-in-out data-closed:-translate-y-1 data-closed:opacity-0"
               >
                 <div className="p-3">
                   <a className="block rounded-lg px-3 py-2 transition hover:bg-white/5" href="#">
