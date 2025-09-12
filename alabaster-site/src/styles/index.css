@@ -1,0 +1,31 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS variables for SVG fills */
+:root {
+  --teal: #2AB3A6;
+  --gold: #D89B1C;
+  --royal-blue: #1E3A8A;
+  --purple: #6B3FA0;
+  --seafoam: #7EE0CF;
+  --stone: #0F1218;
+  --ink: #0B0D12;
+}
+
+/* Hover glow utility */
+.hover-glow { transition: box-shadow 250ms ease, transform 250ms ease; }
+.hover-glow:hover { box-shadow: 0 10px 30px rgba(216,155,28,0.24), 0 8px 18px rgba(20,140,136,0.18); transform: translateY(-1px); }
+
+/* Subtle glass overlay */
+.glass-overlay { background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)); backdrop-filter: blur(4px); }
+
+/* Reveal on scroll */
+.reveal { opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.reveal-in { opacity: 1; transform: translateY(0); }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
+}
