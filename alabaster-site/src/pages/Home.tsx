@@ -3,10 +3,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Section from '@/components/Section'
 import Badge from '@/components/Badge'
-import GlassBG_LightRays from '@/components/GlassBG_LightRays'
 import Reveal from '@/components/Reveal'
 import HeroUpcoming from '@/components/HeroUpcoming'
 import { events } from '@/data/events'
+import StainedGlassHero from '@/components/StainedGlassHero'
+import { HeroBottomBleed } from '@/components/HeroBottomBleed'
 
 export default function Home() {
   const [reduce, setReduce] = React.useState(false)
@@ -26,28 +27,57 @@ export default function Home() {
   return (
     <div className="relative overflow-hidden">
       <div className="relative isolate">
-        <GlassBG_LightRays reduceMotion={reduce} speed={1.8} blur={12} />
-        <Section className="flex min-h-[70vh] flex-col items-center justify-center text-center">
-          <Badge tone="teal">A welcoming family in Jesus</Badge>
-          <h1 className="mt-6 max-w-3xl font-serif text-5xl leading-tight sm:text-6xl">Love Jesus Well</h1>
-          <p className="mt-4 max-w-2xl text-balance font-sans text-lg text-white/80">
-            Learning to love Jesus and one another through the Word, worship, and everyday discipleship.
-          </p>
-          {showUpcoming && (
-            <HeroUpcoming
-              id={next.id}
-              title={next.title}
-              when={`${new Date(next.date).toLocaleDateString()} • ${next.time}`}
-              where={next.location}
-              date={next.date}
-              time={next.time}
-            />
-          )}
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <Link to="/gatherings" className="rounded-2xl bg-teal px-6 py-3 font-sans font-semibold text-ink shadow hover:brightness-110">Upcoming Gatherings</Link>
-            <a href="#" className="rounded-2xl border border-white/15 px-6 py-3 font-sans font-semibold hover:bg-white/5">Learn More</a>
-          </div>
-        </Section>
+        <StainedGlassHero imageUrl="/alabaster_stained_glass.png"
+          hueCycle
+          hueCycleDeg={25}
+          grain
+          grainOpacity={0.45}
+          glow
+          glowStrength={22}
+          glowOpacity={0.25}
+        >
+          <Section className="flex min-h-[70vh] flex-col items-center justify-center text-center">
+            <Badge tone="teal">A welcoming family in Jesus</Badge>
+            <h1 className="mt-6 max-w-3xl font-serif text-5xl leading-tight sm:text-6xl">
+              Love Jesus Well
+            </h1>
+            <p className="mt-4 max-w-2xl text-balance font-sans text-lg text-white/80">
+              Learning to love Jesus and one another through the Word, worship, and everyday discipleship.
+            </p>
+            {showUpcoming && (
+              <HeroUpcoming
+                id={next.id}
+                title={next.title}
+                when={`${new Date(next.date).toLocaleDateString()} • ${next.time}`}
+                where={next.location}
+                date={next.date}
+                time={next.time}
+              />
+            )}
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+              <Link
+                to="/gatherings"
+                className="rounded-2xl bg-teal px-6 py-3 font-sans font-semibold text-ink shadow hover:brightness-110"
+              >
+                Upcoming Gatherings
+              </Link>
+              <a
+                href="#"
+                className="rounded-2xl border border-white/15 px-6 py-3 font-sans font-semibold hover:bg-white/5"
+              >
+                Learn More
+              </a>
+            </div>
+          </Section>
+        </StainedGlassHero>
+        {/* Bleed glow BETWEEN the hero and the next section */}
+<HeroBottomBleed
+  imageUrl="/hero_image.png"
+  bleed={100}             // how tall the overlap is
+  blur={50}
+  opacity={0.55}
+  className="-mt-24 sm:-mt-0"  // pull it up to overlap the hero bottom
+/>
       </div>
 
       <Section className="py-16 sm:py-20">

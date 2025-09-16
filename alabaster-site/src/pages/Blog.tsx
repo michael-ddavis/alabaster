@@ -1,6 +1,7 @@
 import React from 'react'
 import Section from '@/components/Section'
 import Reveal from '@/components/Reveal'
+import { Link } from 'react-router-dom'
 
 type Post = { id: string; title: string; date: string; excerpt: string }
 const posts: Post[] = [
@@ -21,7 +22,7 @@ export default function Blog() {
               <p className="text-white/60">{new Date(p.date).toLocaleDateString()}</p>
               <p className="mt-2 text-white/80">{p.excerpt}</p>
               <div className="mt-4">
-                <a href="#" className="rounded-xl border border-white/15 px-4 py-2 text-sm hover:bg-white/5">Read</a>
+                <Link to={`/blog/${p.id}`} className="rounded-xl border border-white/15 px-4 py-2 text-sm hover:bg-white/5">Read</Link>
               </div>
             </article>
           </Reveal>

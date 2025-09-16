@@ -10,6 +10,8 @@ import Gatherings from './pages/Gatherings'
 import About from './pages/About'
 import Giving from './pages/Giving'
 import Blog from './pages/Blog'
+import BlogDetail from './pages/BlogDetail'
+import GatheringDetail from './pages/GatheringDetail'
 
 const router = createBrowserRouter([
   {
@@ -19,8 +21,10 @@ const router = createBrowserRouter([
       { index: true, element: <Home /> },
       { path: 'about', element: <About /> },
       { path: 'gatherings', element: <Gatherings /> },
+      { path: 'gatherings/:id', element: <GatheringDetail /> },
       { path: 'giving', element: <Giving /> },
       { path: 'blog', element: <Blog /> },
+      { path: 'blog/:id', element: <BlogDetail /> },
     ]
   }
 ])
