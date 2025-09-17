@@ -1,6 +1,6 @@
 import React from 'react'
-import Section from '@/components/Section'
-import Reveal from '@/components/Reveal'
+import Section from '@/components/common/Section'
+import Reveal from '@/components/common/Reveal'
 import { Link } from 'react-router-dom'
 
 type Post = { id: string; title: string; date: string; excerpt: string }

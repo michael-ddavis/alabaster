@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams, Link } from 'react-router-dom'
-import Section from '@/components/Section'
+import Section from '@/components/common/Section'
 import { events } from '@/data/events'
 
 export default function GatheringDetail() {

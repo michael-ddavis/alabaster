@@ -5,13 +5,13 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App'
 import './styles/index.css'
 
-import Home from './pages/Home'
-import Gatherings from './pages/Gatherings'
-import About from './pages/About'
-import Giving from './pages/Giving'
-import Blog from './pages/Blog'
-import BlogDetail from './pages/BlogDetail'
-import GatheringDetail from './pages/GatheringDetail'
+import Home from './pages/home/Home'
+import Gatherings from './pages/gathering/Gatherings'
+import About from './pages/about/About'
+import Giving from './pages/giving/Giving'
+import Blog from './pages/blog/Blog'
+import BlogDetail from './pages/blog/BlogDetail'
+import GatheringDetail from './pages/gathering/GatheringDetail'
 
 const router = createBrowserRouter([
   {

@@ -1,9 +1,9 @@
 
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Badge from '@/components/Badge'
-import useCountdown from '@/components/useCountdown'
-import { toISO } from '@/components/datetimeUtil'
+import Badge from '@/components/common/Badge'
+import useCountdown from '@/components/common/banner/useCountdown'
+import { toISO } from '@/components/common/banner/datetimeUtil'
 
 export default function HeroUpcoming({ id, when, where, title, date, time }: { id: string; when: string; where: string; title: string; date: string; time: string }) {
   const left = useCountdown(toISO(date, time))

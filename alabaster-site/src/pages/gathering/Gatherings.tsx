@@ -1,7 +1,7 @@
 
 import React from 'react'
-import Section from '@/components/Section'
-import Reveal from '@/components/Reveal'
+import Section from '@/components/common/Section'
+import Reveal from '@/components/common/Reveal'
 import { events } from '@/data/events'
 import { Link } from 'react-router-dom'
 
