@@ -55,12 +55,6 @@ export default function Home() {
               />
             )}
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-              <Link
-                to="/gatherings"
-                className="rounded-2xl bg-teal px-6 py-3 font-sans font-semibold text-ink shadow hover:brightness-110"
-              >
-                Upcoming Gatherings
-              </Link>
               <a
                 href="#"
                 className="rounded-2xl border border-white/15 px-6 py-3 font-sans font-semibold hover:bg-white/5"

@@ -44,7 +44,7 @@ export default function StainedGlassHero({
   }, [hueCycleDeg]);
 
   return (
-    <div className={"relative min-h-[70vh] " + className}>
+    <div className={"relative min-h-[70vh] backdrop-brightness-70" + className}>
       <div
         className="absolute inset-0 will-change-transform"
         style={{

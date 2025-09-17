@@ -9,16 +9,62 @@ export default function App() {
   const next = events[0]
   return (
     <div className="min-h-dvh bg-ink text-white">
-      {next && <EventBanner id={next.id} title={next.title} date={next.date} time={next.time} location={next.location} />}
+      {next && (
+        <EventBanner
+          id={next.id}
+          title={next.title}
+          date={next.date}
+          time={next.time}
+          location={next.location}
+        />
+      )}
       <header className="sticky top-0 z-40 border-b border-white/10 bg-black/30 backdrop-blur">
         <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
-          <Link to="/" className="font-serif text-2xl">Alabaster</Link>
+          <Link to="/" className="flex items-center gap-2">
+            <img src="/Alabaster.svg" alt="Alabaster logo" className="h-12 w-auto" />
+            <span className="font-serif text-xl">Alabaster</span>
+          </Link>
           <nav className="flex gap-6 text-white/80">
-            <NavLink to="/" className={({isActive})=> isActive ? 'text-white' : 'hover:text-white'}>Home</NavLink>
-            <NavLink to="/about" className={({isActive})=> isActive ? 'text-white' : 'hover:text-white'}>About</NavLink>
-            <NavLink to="/gatherings" className={({isActive})=> isActive ? 'text-white' : 'hover:text-white'}>Gatherings</NavLink>
-            <NavLink to="/giving" className={({isActive})=> isActive ? 'text-white' : 'hover:text-white'}>Giving</NavLink>
-            <NavLink to="/blog" className={({isActive})=> isActive ? 'text-white' : 'hover:text-white'}>Blog</NavLink>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "text-white" : "hover:text-white"
+              }
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                isActive ? "text-white" : "hover:text-white"
+              }
+            >
+              About
+            </NavLink>
+            <NavLink
+              to="/gatherings"
+              className={({ isActive }) =>
+                isActive ? "text-white" : "hover:text-white"
+              }
+            >
+              Gatherings
+            </NavLink>
+            <NavLink
+              to="/giving"
+              className={({ isActive }) =>
+                isActive ? "text-white" : "hover:text-white"
+              }
+            >
+              Giving
+            </NavLink>
+            <NavLink
+              to="/blog"
+              className={({ isActive }) =>
+                isActive ? "text-white" : "hover:text-white"
+              }
+            >
+              Blog
+            </NavLink>
           </nav>
         </div>
       </header>
@@ -26,7 +72,9 @@ export default function App() {
         <Outlet />
       </main>
       <FloatingCTAs />
-      <footer className="mt-16 border-t border-white/10 py-10 text-center text-white/60">© {new Date().getFullYear()} Alabaster</footer>
+      <footer className="mt-16 border-t border-white/10 py-10 text-center text-white/60">
+        © {new Date().getFullYear()} Alabaster
+      </footer>
     </div>
-  )
+  );
 }
