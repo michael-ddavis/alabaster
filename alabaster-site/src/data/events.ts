@@ -12,14 +12,14 @@ export type Event = {
 
 export const events: Event[] = [
   {
-    id: 'sun-service',
-    title: 'Sunday Gathering',
-    date: '2025-09-21',
-    time: '10:00 AM',
-    location: '1919 West Ave',
+    id: 'fri-worship-service',
+    title: 'Worship Night',
+    date: '2025-10-08',
+    time: '7:00 PM',
+    location: '6421 Rigsby Rd',
     blurb: 'Worship, Word, and fellowship.',
     flyer: '/hero_image.png',
-    description: 'Join us for worship, teaching, and prayer. Kids ministry available. Stay after for coffee and conversation.',
+    description: 'Join us for worship, teaching, and prayer. Kids ministry available.',
     mapEmbed: 'https://www.google.com/maps?q=1919+West+Ave&output=embed'
   }
 ]

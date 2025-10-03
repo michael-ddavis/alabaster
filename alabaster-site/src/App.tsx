@@ -34,6 +34,7 @@ export default function App() {
           <nav className="hidden md:flex gap-6 text-white/80">
             <NavLink to="/about" className={({ isActive }) => isActive ? 'text-white' : 'hover:text-white'}>About</NavLink>
             <NavLink to="/gatherings" className={({ isActive }) => isActive ? 'text-white' : 'hover:text-white'}>Gatherings</NavLink>
+            <NavLink to="/podcasts" className={({ isActive }) => isActive ? 'text-white' : 'hover:text-white'}>Podcast</NavLink>
             <NavLink to="/blog" className={({ isActive }) => isActive ? 'text-white' : 'hover:text-white'}>Blog</NavLink>
             <NavLink to="/giving" className={({ isActive }) => isActive ? 'text-white' : 'hover:text-white'}>Giving</NavLink>
           </nav>
@@ -72,6 +73,9 @@ export default function App() {
       <footer className="mt-16 border-t border-white/10 py-10 text-center text-white/60">
         © {new Date().getFullYear()} Alabaster
       </footer>
+
+      {/* To clear banner in DEV mode */}
+      {/* <FloatingCTAs /> */}
     </div>
   )
 }

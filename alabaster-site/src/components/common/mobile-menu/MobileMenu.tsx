@@ -67,6 +67,7 @@ export default function MobileMenu({
                 <div className="grid gap-3 text-2xl font-bold">
                   <NavLink to="/about" onClick={onClose} className="py-2 hover:text-white">About</NavLink>
                   <NavLink to="/gatherings" onClick={onClose} className="py-2 hover:text-white">Gatherings</NavLink>
+                  <NavLink to="/podcasts" onClick={onClose} className="py-2 hover:text-white">Podcast</NavLink>
                   <NavLink to="/giving" onClick={onClose} className="py-2 hover:text-white">Giving</NavLink>
                   <NavLink to="/blog" onClick={onClose} className="py-2 hover:text-white">Blog</NavLink>
                 </div>

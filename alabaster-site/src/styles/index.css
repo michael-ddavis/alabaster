@@ -12,6 +12,21 @@
   --seafoam: #7EE0CF;
   --stone: #0F1218;
   --ink: #0B0D12;
+  --alabaster-bg: 14 14 16; /* deep gray */
+}
+
+html, body {
+background-color: #0a0a0a
+}
+
+
+/* Optional container and card helpers */
+.bg-deeper {
+background: radial-gradient(90% 60% at 50% 0%, rgba(255,255,255,0.02), rgba(0,0,0,0))
+, rgb(10 10 10);
+}
+.card-dew {
+@apply rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md;
 }
 
 /* Hover glow utility */

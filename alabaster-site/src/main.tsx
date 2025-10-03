@@ -12,6 +12,7 @@ import Giving from './pages/giving/Giving'
 import Blog from './pages/blog/Blog'
 import BlogDetail from './pages/blog/BlogDetail'
 import GatheringDetail from './pages/gathering/GatheringDetail'
+import { PodcastPage } from './pages/podcast/Podcast'
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
       { path: 'giving', element: <Giving /> },
       { path: 'blog', element: <Blog /> },
       { path: 'blog/:id', element: <BlogDetail /> },
+      { path: 'podcasts', element: <PodcastPage /> },
     ]
   }
 ])
