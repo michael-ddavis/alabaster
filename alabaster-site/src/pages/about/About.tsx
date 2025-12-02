@@ -3,25 +3,10 @@ import Accordion from '@/components/common/Accordion'
 import AudioSignalBackground from '@/components/common/AudioSignalBackground'
 import Reveal from '@/components/common/Reveal'
 import Section from '@/components/common/Section'
+import { beliefs } from '@/data/beliefs'
 import React from 'react'
 
 export default function About() {
-  // Beliefs: keep your real items here
-  const beliefs = [
-    {
-      id: 'scripture',
-      title: 'Scripture',
-      content: (
-        <p>
-          The Bible is the inspired Word of God, revealing His character and His good news in Jesus. It guides our faith and life together.
-        </p>
-      )
-    },
-    { id: 'triune-god', title: 'Triune God', content: <p>One God in three Persons—Father, Son, and Holy Spirit.</p> },
-    { id: 'jesus', title: 'Jesus Christ', content: <p>Fully God and fully man; by His life, death, and resurrection He restores us.</p> },
-    { id: 'salvation', title: 'Salvation & Discipleship', content: <p>By grace through faith; we follow Jesus as Lord in everyday life.</p> },
-    { id: 'church', title: 'The Church & Mission', content: <p>A family for worship, community, and witness—joining God’s mission in our city.</p> }
-  ]
   // Curated event photos (keep to ~5–6 for calmness)
   const photos = [
     '/images/events/1.jpg',
